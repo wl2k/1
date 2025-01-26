@@ -1,11 +1,10 @@
 #!/bin/sh
 
-code() {
+esc() {
     printf '\e[%sm' "$1"
 }
-NC=$(code 0) # No color
 color() {
-    printf '%s' "$(code "$1")$2$NC"
+    printf '%s' "$(esc "$1")$2$(esc)"
 }
 
 red() {
