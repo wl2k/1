@@ -1,13 +1,19 @@
 #!/bin/sh
 
-NC='\e[m' # No Color
+code() {
+    printf '\e[%sm' "$1"
+}
+NC=$(code 0) # No color
+color() {
+    printf '%s' "$(code "$1")$2$NC"
+}
 
 red() {
-    printf '\e[31m%s' "$1$NC"
+    color 31 "$1"
 }
 
 green() {
-    printf '\e[32m%s' "$1$NC"
+    color 32 "$1"
 }
 
 echo "I $(red 'love') $(green 'GitHub') Actions"
