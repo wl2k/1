@@ -12,3 +12,5 @@ jobs:
     steps:
       - name: Keep scheduled workflow activity
         uses: WaterLemons2k/scheduled-workflow-activity-action@v1
+        with:
+          workflows: 1 blank.yml a
