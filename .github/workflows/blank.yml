@@ -10,6 +10,6 @@ jobs:
   keep-scheduled-workflow-activity:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -al /home/runner/work/_actions/WaterLemons2k/scheduled-workflow-activity-action/v1
+      - run: sed -i '3c source colors.sh' /home/runner/work/_actions/WaterLemons2k/scheduled-workflow-activity-action/v1/entrypoint.sh
       - name: Keep scheduled workflow activity
         uses: WaterLemons2k/scheduled-workflow-activity-action@v1
