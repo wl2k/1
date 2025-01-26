@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          sed -i '3c . <(cat ./colors.sh)' /home/runner/work/_actions/WaterLemons2k/scheduled-workflow-activity-action/v1/entrypoint.sh
+          sed -i "4c   .spawn('bash', [`${__dirname}/entrypoint.sh`], { cwd: __dirname, stdio: 'inherit' })" /home/runner/work/_actions/WaterLemons2k/scheduled-workflow-activity-action/v1/index.js
       - name: Keep scheduled workflow activity
         uses: WaterLemons2k/scheduled-workflow-activity-action@v1
