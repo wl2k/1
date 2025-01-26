@@ -15,4 +15,4 @@ green() {
     color 32 "$1"
 }
 
-echo "I $(red 'love') $(green 'GitHub') Actions"
+echo "::warning::I $(red 'love') $(green 'GitHub') Actions"
