@@ -4,7 +4,7 @@ esc() {
     printf '\e[%sm' "$1"
 }
 color() {
-    printf '%s' "$(esc "$1")$2$(esc)"
+    printf '%s' "$(esc "$1")$2$(esc 0)"
 }
 
 red() {
